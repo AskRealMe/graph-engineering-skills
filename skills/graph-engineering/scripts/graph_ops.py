@@ -37,7 +37,7 @@ def require(ok, message):
 
 
 def now():
-    return datetime.now(timezone.utc).isoformat(timespec="seconds")
+    return datetime.now(timezone.utc).isoformat(timespec="microseconds")
 
 
 def load(path):
@@ -343,7 +343,7 @@ def materialize(root, spec):
 
 
 def run_files(graph):
-    return sorted((graph / "runs").glob("*/state.json"))
+    return sorted((graph / "runs").glob("*/state.json"), key=lambda p: datetime.fromisoformat(load(p)["created_at"]))
 
 
 def active_runs(graph):

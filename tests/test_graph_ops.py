@@ -137,6 +137,24 @@ class GraphTests(unittest.TestCase):
         self.assertEqual(second["values"]["requirements"], "")
         self.assertEqual(len(self.call("history")), 2)
 
+    def test_latest_run_uses_creation_time_not_random_identifier(self):
+        first = self.start()
+        self.call("cancel")
+        second = self.start()
+        self.call("cancel")
+        runs = self.graph / "runs"
+        old_dir, new_dir = runs / first["id"], runs / second["id"]
+        old = ops.load(old_dir / "state.json")
+        new = ops.load(new_dir / "state.json")
+        old.update(id="20260101T000000-zzzz", created_at="2026-01-01T00:00:00.100000+00:00")
+        new.update(id="20260101T000000-aaaa", created_at="2026-01-01T00:00:00.200000+00:00")
+        ops.save(old_dir / "state.json", old)
+        ops.save(new_dir / "state.json", new)
+        old_dir.rename(runs / old["id"])
+        new_dir.rename(runs / new["id"])
+        self.assertEqual(self.call("status")["id"], new["id"])
+        self.assertEqual([r["id"] for r in self.call("history")], [old["id"], new["id"]])
+
     def test_real_handle_required_and_stale_results_rejected(self):
         self.start()
         handoff = self.call("prepare")
