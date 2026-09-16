@@ -1,0 +1,4 @@
+interface:
+  display_name: "Graph Engineering"
+  short_description: "Create and edit graph workflow skills"
+  default_prompt: "Use $graph-engineering to create or edit a graph workflow skill from my description."
