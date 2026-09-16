@@ -1,0 +1,55 @@
+{
+  "recorded_on": "2026-09-16",
+  "repository": "https://github.com/AskRealMe/graph-engineering-skills",
+  "visibility": "PUBLIC",
+  "default_branch": "main",
+  "installed_from_commit": "86d8951a7117606ca5d53b42bd8d172f602f138d",
+  "skill_code_revision": "f1e83bb2e7d55f1d818c52b5b4e716e80ed6f6ea",
+  "install": {
+    "command": "npx --yes skills add AskRealMe/graph-engineering-skills --skill graph-engineering --agent codex --yes --json",
+    "exit_code": 0,
+    "status": "installed",
+    "source": "AskRealMe/graph-engineering-skills",
+    "ref": "repository default branch (main)",
+    "mode": "copy",
+    "scope": "project",
+    "agents": [
+      "Codex"
+    ],
+    "computed_hash": "100bca05f2613809063faf81baa291a889189088dcd21cbf218d77b275882d67",
+    "location": "WORKSPACE_ROOT/.agents/skills/graph-engineering"
+  },
+  "verification": {
+    "recorded_on": "2026-09-16",
+    "installed_files_match_verified_develop": true,
+    "file_count": 8,
+    "existing_workspace_instructions_preserved": true,
+    "managed_registration_block_count": 1,
+    "lock": {
+      "version": 1,
+      "skills": {
+        "graph-engineering": {
+          "source": "AskRealMe/graph-engineering-skills",
+          "sourceType": "github",
+          "skillPath": "skills/graph-engineering/SKILL.md",
+          "computedHash": "100bca05f2613809063faf81baa291a889189088dcd21cbf218d77b275882d67"
+        }
+      }
+    }
+  },
+  "doctor": {
+    "python": "3.14.7",
+    "project_exists": true,
+    "registered": true,
+    "errors": [],
+    "native_subagents": "Check live Codex tools separately"
+  },
+  "fresh_session_discovery": {
+    "exit_code": 0,
+    "present_in_catalog": true,
+    "path": "WORKSPACE_ROOT/.agents/skills/graph-engineering/SKILL.md",
+    "host": "Codex app-bundled CLI 0.154.0-alpha.6.2",
+    "tools_or_files_used_by_discovery_agent": false
+  },
+  "note": "The skill files are identical to the verified public develop package. Later release-evidence commits change documentation only."
+}

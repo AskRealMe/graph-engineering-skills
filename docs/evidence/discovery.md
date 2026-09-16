@@ -12,3 +12,7 @@ The fresh session identified both skills and expanded their catalog aliases:
 This establishes discovery; native execution is evidenced separately. The host truncated catalog descriptions to its skill-context budget, but retained the skill names and paths. The full instructions are available on activation.
 
 The successful process used the app-bundled Codex CLI 0.154.0-alpha.6.2. An initial attempt with another installed CLI, 0.145.0, was rejected by the model service as too old. No user configuration or model selection was changed. The successful process returned exit code 0. The original JSONL events and Korean answer remain in the local evaluation evidence.
+
+## Final workspace installation
+
+After promotion to public main, the same fresh-session check was repeated from the target workspace. It returned exit code 0 and identified `graph-engineering` at `WORKSPACE_ROOT/.agents/skills/graph-engineering/SKILL.md` from the supplied catalog. The probe used no tools and did not invoke or modify the skill. Exact installed-file verification and the registration check are recorded in `release.json`.

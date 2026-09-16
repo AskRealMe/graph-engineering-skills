@@ -12,6 +12,7 @@ Recorded on 2026-09-16. These are compact, sanitized artifacts from local behavi
 - `management.md` and `management-commands.json`: natural-language authoring and management using the public develop installation, including expected rejected operations.
 - `management-retest.md` and `.json`: observed findings retested against the updated public installation.
 - `reference-deletion-check.json`: deletion refused while another graph referenced the node skill.
+- `release.json`: public main installation, exact-file match, preserved workspace instructions, and fresh-session discovery.
 - `install-update.json`: actual remote update and unchanged graph, history, and registration hashes.
 - `discovery.md`: independent fresh-session Codex catalog discovery.
 - `skill-manifest.json`: exact skill files compared with the published installation.

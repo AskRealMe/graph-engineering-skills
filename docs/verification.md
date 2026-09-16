@@ -1,10 +1,12 @@
 # Verification
 
-Recorded on 2026-09-16 (Asia/Seoul). Status: all 60 requirements covered; public main promotion and final workspace installation pending.
+Recorded on 2026-09-16 (Asia/Seoul). Status: all 60 requirements covered; published on public main and installed in the target workspace.
 
 Graph Engineering is an Agent Skill that teaches an AI agent to create and edit graph skills. Codex is the first supported execution host. The helpers manage files and deterministic transitions; genuine native agents performed the work in the execution evaluations.
 
 ## Evidence and revisions
+
+- The verified skill was promoted to public main, installed in the target workspace with the real `npx skills` CLI, and discovered by a fresh Codex session. All eight installed files matched the verified develop package; registration preserved existing workspace instructions. See [release evidence](evidence/release.json).
 
 - The public develop skill was installed through the real `npx skills` CLI at `78cf349`. Independent evaluators used that installation and isolated local projects.
 - The backend author generated a four-stage skill from a Korean request. A fresh-context orchestrator used only the generated skill and project inputs. The completed run used eight real native attempts and two failed-test returns to implementation. One failure was deliberately injected; the other was a naturally discovered documented-command issue. Final HTTP tests passed 99/99, independent review passed, and the parent reran the suite successfully.
