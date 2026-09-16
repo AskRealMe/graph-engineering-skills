@@ -1,0 +1,87 @@
+{
+  "run_id": "20260916T054313-b130ae4b",
+  "graph_version": "c282d034787e30c5",
+  "status": "completed",
+  "current": "END",
+  "step": 8,
+  "inflight": null,
+  "visits": {
+    "requirements": 1,
+    "implementation": 3,
+    "testing": 3,
+    "review": 1
+  },
+  "domain": {
+    "implementation_round": 3,
+    "tests_passed": true,
+    "review_passed": true,
+    "outcome": "achieved"
+  },
+  "native_attempts": [
+    {
+      "id": "1c283f941e4649118fd95fb93cd72262",
+      "node": "requirements",
+      "status": "success",
+      "agent_id": "/root/backend_installed/backend_executor/requirements_1",
+      "valid": true
+    },
+    {
+      "id": "8373c5ea3aa241649641b8d1aaba91df",
+      "node": "implementation",
+      "status": "success",
+      "agent_id": "/root/backend_installed/backend_executor/implementation_1",
+      "valid": true
+    },
+    {
+      "id": "f7c609ae24f049ba98c89217b54ce462",
+      "node": "testing",
+      "status": "success",
+      "agent_id": "/root/backend_installed/backend_executor/testing_1",
+      "valid": true
+    },
+    {
+      "id": "5f1ddf27342c40c9ab0bc66e3bb86386",
+      "node": "implementation",
+      "status": "success",
+      "agent_id": "/root/backend_installed/backend_executor/implementation_2",
+      "valid": true
+    },
+    {
+      "id": "663668aec49143059228272b66ded7fe",
+      "node": "testing",
+      "status": "success",
+      "agent_id": "/root/backend_installed/backend_executor/testing_2",
+      "valid": true
+    },
+    {
+      "id": "5fd94f11edff426d9f2f1635b89799d9",
+      "node": "implementation",
+      "status": "success",
+      "agent_id": "/root/backend_installed/backend_executor/implementation_3",
+      "valid": true
+    },
+    {
+      "id": "a161589fb9474389b101ef28a5ebf729",
+      "node": "testing",
+      "status": "success",
+      "agent_id": "/root/backend_installed/backend_executor/testing_3",
+      "valid": true
+    },
+    {
+      "id": "2cb0dbfa56ce49de9bcd9874d0d68796",
+      "node": "review",
+      "status": "success",
+      "agent_id": "/root/backend_installed/backend_executor/review_1",
+      "valid": true
+    }
+  ],
+  "final_test_command": "node --test --test-reporter=tap todo.integration.test.cjs",
+  "final_test_exit_code": 0,
+  "final_test_tap_summary": "# tests 99\n# pass 99\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0",
+  "source_sha256": {
+    "server.cjs": "1254d735da49ff028e1b9e8d6d51c4f1db93636182c947af1fb14c912341b69b",
+    "todo.integration.test.cjs": "e8de50833a3fc4713289ac985cda4b967bc0e2cf333b23152f01b0f7bae89303",
+    "README.md": "96959441ebc95eb53bcc3bebc2e71a0746989b4b79c2b1c1f1b82f50310f8d92"
+  },
+  "trace_exit_code": 0
+}

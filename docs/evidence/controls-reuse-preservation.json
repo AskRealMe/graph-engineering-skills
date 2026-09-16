@@ -1,0 +1,18 @@
+{
+  "prior_files_checked": 41,
+  "changed_prior_files": [],
+  "all_prior_run_files_unchanged": true,
+  "checkpoint_hashes": {
+    "20260916T054212-f1afdae9/state.json": {
+      "before": "9d1f4573217c9d129b06fbc9d525b16914c20652ecb1809f03879af6f8b4a60c",
+      "after": "9d1f4573217c9d129b06fbc9d525b16914c20652ecb1809f03879af6f8b4a60c",
+      "unchanged": true
+    },
+    "20260916T055641-61a31608/state.json": {
+      "before": "43f0572823f2251840ef5be4a1a4041db8bc179fb67fea4c918de873b827cd34",
+      "after": "43f0572823f2251840ef5be4a1a4041db8bc179fb67fea4c918de873b827cd34",
+      "unchanged": true
+    }
+  },
+  "definition_unchanged": true
+}

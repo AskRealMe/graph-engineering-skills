@@ -1,0 +1,340 @@
+{
+  "attempt_id": "663668aec49143059228272b66ded7fe",
+  "integration": {
+    "command": "node --test --test-reporter=tap todo.integration.test.cjs",
+    "executable": "USER_HOME/.hermes/node/bin/node",
+    "cwd": "EVALUATION_ROOT/backend-live",
+    "started_at": "2026-09-16T06:10:03.627Z",
+    "ended_at": "2026-09-16T06:10:09.142Z",
+    "exit_code": 0,
+    "signal": null,
+    "execution_error": null,
+    "counts": {
+      "tests": 99,
+      "suites": 0,
+      "pass": 99,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "stdout": "evidence/testing-663668aec49143059228272b66ded7fe/integration.stdout.txt",
+    "stderr": "evidence/testing-663668aec49143059228272b66ded7fe/integration.stderr.txt",
+    "cleanup": {
+      "children": [
+        {
+          "pid": 7766,
+          "absent": true,
+          "observation": "ESRCH"
+        },
+        {
+          "pid": 7767,
+          "absent": true,
+          "observation": "ESRCH"
+        }
+      ],
+      "listeners": [
+        {
+          "port": 49534,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 49540,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 49549,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 49585,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 49726,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 49760,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 49805,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 49840,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 49848,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 49864,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 49874,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 49878,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        }
+      ],
+      "passed": true
+    }
+  },
+  "documented": {
+    "command": "node --test",
+    "executable": "USER_HOME/.hermes/node/bin/node",
+    "cwd": "EVALUATION_ROOT/backend-live",
+    "started_at": "2026-09-16T06:10:09.148Z",
+    "ended_at": "2026-09-16T06:10:14.825Z",
+    "exit_code": 1,
+    "signal": null,
+    "execution_error": null,
+    "counts": {
+      "tests": 297,
+      "suites": 0,
+      "pass": 296,
+      "fail": 1,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "stdout": "evidence/testing-663668aec49143059228272b66ded7fe/documented-command.stdout.txt",
+    "stderr": "evidence/testing-663668aec49143059228272b66ded7fe/documented-command.stderr.txt",
+    "cleanup": {
+      "children": [
+        {
+          "pid": 7779,
+          "absent": true,
+          "observation": "ESRCH"
+        },
+        {
+          "pid": 7782,
+          "absent": true,
+          "observation": "ESRCH"
+        },
+        {
+          "pid": 7780,
+          "absent": true,
+          "observation": "ESRCH"
+        },
+        {
+          "pid": 7784,
+          "absent": true,
+          "observation": "ESRCH"
+        },
+        {
+          "pid": 7781,
+          "absent": true,
+          "observation": "ESRCH"
+        },
+        {
+          "pid": 7783,
+          "absent": true,
+          "observation": "ESRCH"
+        }
+      ],
+      "listeners": [
+        {
+          "port": 49896,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 49914,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 49937,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50048,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50474,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50572,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50707,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50819,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50836,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50880,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 49898,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 49920,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 49953,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50058,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50476,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50580,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50704,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50806,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50829,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50882,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 49897,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 49915,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 49940,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50042,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50463,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50575,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50715,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50814,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50833,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50884,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50912,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50923,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50910,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50922,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50911,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        },
+        {
+          "port": 50924,
+          "observation": "ECONNREFUSED",
+          "closed": true
+        }
+      ],
+      "passed": true
+    }
+  },
+  "inspected_files_unchanged": true
+}

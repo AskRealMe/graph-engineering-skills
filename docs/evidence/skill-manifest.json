@@ -1,0 +1,16 @@
+{
+  "recorded_on": "2026-09-16",
+  "installed_ref": "develop",
+  "installed_commit": "f1e83bb",
+  "files": {
+    "SKILL.md": "7382889ba9b389d79435932be4600dffbf1f188d427846dc051a97ce019822a9",
+    "references/operations.md": "959199467bbca96451c3544dd48d175260b50f3e9100cb0f3bf51c068a21af8b",
+    "references/authoring.md": "019c5875cfa7786e33c1ee47e64ff774883856e5c659e0a0be4b772a74a40f41",
+    "references/contract.md": "42f33af46f096d690d7d91a73af4e220bb9eb2bffaa8e29df85006eaf235287b",
+    "references/execution.md": "deccca5c5ca8b07b678f067d196e5903310869e0db3b378a79a4f89dd4924e73",
+    "agents/openai.yaml": "9fbfd147a69b48aea577a67fd6755e04b17bd5978908f354b036ad4587f7024b",
+    "scripts/graph_ops.py": "36306827c3b32d8d3c153ab9dc7b3b831f319841e7bb96faed8a5360025329a7",
+    "assets/graph-skill.md": "465fe2ec49ea4803c634b1e9699259f9323aaffb018755e97aa0a0f6b4cd8165"
+  },
+  "source_install_mismatches": []
+}

@@ -1,0 +1,20 @@
+{
+  "recorded_on": "2026-09-16",
+  "initial_commit": "78cf349ebf642553ec06fe45f78d0695b8abfd95",
+  "latest_commit": "f1e83bb",
+  "preserved_file_count": 20,
+  "changed_files": [],
+  "lock": {
+    "version": 1,
+    "skills": {
+      "graph-engineering": {
+        "source": "AskRealMe/graph-engineering-skills",
+        "ref": "develop",
+        "sourceType": "github",
+        "skillPath": "skills/graph-engineering/SKILL.md",
+        "computedHash": "100bca05f2613809063faf81baa291a889189088dcd21cbf218d77b275882d67"
+      }
+    }
+  },
+  "latest_helper_hash": "36306827c3b32d8d3c153ab9dc7b3b831f319841e7bb96faed8a5360025329a7"
+}

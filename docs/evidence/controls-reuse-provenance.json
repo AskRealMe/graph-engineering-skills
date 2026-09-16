@@ -1,0 +1,9 @@
+{
+  "public_develop_revision": "f1e83bb",
+  "installed_helper": "EVALUATION_ROOT/install-lifecycle/.agents/skills/graph-engineering/scripts/graph_ops.py",
+  "installed_helper_sha256": "36306827c3b32d8d3c153ab9dc7b3b831f319841e7bb96faed8a5360025329a7",
+  "generated_helper_before_sha256": "81d20fae14f47155c453cb18835eb4c61648148639354a0742929fbca332dfbc",
+  "installed_skill_sha256": "7382889ba9b389d79435932be4600dffbf1f188d427846dc051a97ce019822a9",
+  "generated_helper_after_sha256": "36306827c3b32d8d3c153ab9dc7b3b831f319841e7bb96faed8a5360025329a7",
+  "installed_matches_generated": true
+}

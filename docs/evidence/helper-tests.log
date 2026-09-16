@@ -1,0 +1,36 @@
+test_atomic_create_does_not_leave_a_broken_skill (test_graph_ops.GraphTests.test_atomic_create_does_not_leave_a_broken_skill) ... ok
+test_branch_loop_and_trace (test_graph_ops.GraphTests.test_branch_loop_and_trace) ... ok
+test_create_discovery_portability_and_registration (test_graph_ops.GraphTests.test_create_discovery_portability_and_registration) ... ok
+test_delete_archives_history_and_refuses_active (test_graph_ops.GraphTests.test_delete_archives_history_and_refuses_active) ... ok
+test_errors_retry_then_exhaust_and_manual_retry (test_graph_ops.GraphTests.test_errors_retry_then_exhaust_and_manual_retry) ... ok
+test_gate_needs_actual_response (test_graph_ops.GraphTests.test_gate_needs_actual_response) ... ok
+test_latest_run_uses_creation_time_not_random_identifier (test_graph_ops.GraphTests.test_latest_run_uses_creation_time_not_random_identifier) ... ok
+test_loop_limit_is_not_an_implicit_success (test_graph_ops.GraphTests.test_loop_limit_is_not_an_implicit_success) ... ok
+test_migration_checks_and_replaces_skill_snapshot (test_graph_ops.GraphTests.test_migration_checks_and_replaces_skill_snapshot) ... ok
+test_migration_handoff_is_persisted_consistently (test_graph_ops.GraphTests.test_migration_handoff_is_persisted_consistently) ... ok
+test_missing_inputs_and_one_active_run (test_graph_ops.GraphTests.test_missing_inputs_and_one_active_run) ... ok
+test_old_execution_cannot_overlap_new_active_run (test_graph_ops.GraphTests.test_old_execution_cannot_overlap_new_active_run) ... ok
+test_optional_defaults_are_visible_separately_from_required_inputs (test_graph_ops.GraphTests.test_optional_defaults_are_visible_separately_from_required_inputs) ... ok
+test_pause_during_inflight_then_fresh_read_resume (test_graph_ops.GraphTests.test_pause_during_inflight_then_fresh_read_resume) ... ok
+test_preview_edit_and_mermaid_sync (test_graph_ops.GraphTests.test_preview_edit_and_mermaid_sync) ... ok
+test_real_handle_required_and_stale_results_rejected (test_graph_ops.GraphTests.test_real_handle_required_and_stale_results_rejected) ... ok
+test_recovery_can_accept_a_result_retained_during_stop (test_graph_ops.GraphTests.test_recovery_can_accept_a_result_retained_during_stop) ... ok
+test_recovery_cannot_replay_a_committed_attempt (test_graph_ops.GraphTests.test_recovery_cannot_replay_a_committed_attempt) ... ok
+test_reject_invalid_graph_before_creation (test_graph_ops.GraphTests.test_reject_invalid_graph_before_creation) ... ok
+test_relative_reference_survives_staged_creation (test_graph_ops.GraphTests.test_relative_reference_survives_staged_creation) ... ok
+test_removing_node_archives_owned_skill_and_keeps_run_snapshot (test_graph_ops.GraphTests.test_removing_node_archives_owned_skill_and_keeps_run_snapshot) ... ok
+test_rerun_restores_inputs_invalidates_outputs_preserves_history (test_graph_ops.GraphTests.test_rerun_restores_inputs_invalidates_outputs_preserves_history) ... ok
+test_route_dry_run_missing_ambiguous_and_priority (test_graph_ops.GraphTests.test_route_dry_run_missing_ambiguous_and_priority) ... ok
+test_same_node_can_switch_to_local_copy_without_losing_old_files (test_graph_ops.GraphTests.test_same_node_can_switch_to_local_copy_without_losing_old_files) ... ok
+test_shared_and_copied_skill_resources (test_graph_ops.GraphTests.test_shared_and_copied_skill_resources) ... ok
+test_snapshot_preserved_when_authoring_changes (test_graph_ops.GraphTests.test_snapshot_preserved_when_authoring_changes) ... ok
+test_state_change_cannot_skip_stale_upstream_results (test_graph_ops.GraphTests.test_state_change_cannot_skip_stale_upstream_results) ... ok
+test_state_change_requires_recomputing_affected_nodes (test_graph_ops.GraphTests.test_state_change_requires_recomputing_affected_nodes) ... ok
+test_stop_requires_settlement_and_preserves_effects (test_graph_ops.GraphTests.test_stop_requires_settlement_and_preserves_effects) ... ok
+test_trial_and_clone_have_independent_states (test_graph_ops.GraphTests.test_trial_and_clone_have_independent_states) ... ok
+test_wrong_patch_type_scope_and_nonexistent_artifact (test_graph_ops.GraphTests.test_wrong_patch_type_scope_and_nonexistent_artifact) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.922s
+
+OK

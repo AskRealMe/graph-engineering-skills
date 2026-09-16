@@ -1,0 +1,12 @@
+{
+  "actual_handle": "/root/controls_installed/cancel_waiting_count",
+  "native_interrupt_previous_status": "running",
+  "native_list_agents_status": "interrupted",
+  "partial_files": [
+    ".agents/skills/word-summary/runs/20260916T055641-61a31608/results/1d7b12b0a93a49cd88d32cb0754c985c/waiting-marker.txt"
+  ],
+  "marker": "1d7b12b0a93a49cd88d32cb0754c985c\n",
+  "result_exists": false,
+  "signal_exists": false,
+  "root_independent_native_status_check": "interrupted"
+}

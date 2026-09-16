@@ -1,0 +1,231 @@
+{
+  "format_version": 1,
+  "id": "backend-development",
+  "name": "Backend Development",
+  "description": "Deliver backend changes through delegated requirements analysis, implementation, HTTP integration testing, and review, allowing at most three implementation visits.",
+  "entry": "requirements",
+  "max_steps": 11,
+  "routing": "exclusive",
+  "state": {
+    "goal": {
+      "type": "string",
+      "required": true
+    },
+    "requirements": {
+      "type": "string",
+      "default": ""
+    },
+    "implementation_round": {
+      "type": "integer",
+      "default": 0
+    },
+    "implementation_summary": {
+      "type": "string",
+      "default": ""
+    },
+    "feedback": {
+      "type": "string",
+      "default": ""
+    },
+    "tests_passed": {
+      "type": "boolean",
+      "default": false
+    },
+    "review_passed": {
+      "type": "boolean",
+      "default": false
+    },
+    "outcome": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "achieved",
+        "attempts_exhausted"
+      ],
+      "default": "pending"
+    }
+  },
+  "nodes": [
+    {
+      "id": "requirements",
+      "name": "Analyze requirements",
+      "reads": [
+        "goal"
+      ],
+      "writes": [
+        "requirements"
+      ],
+      "max_attempts": 1,
+      "max_visits": 1,
+      "instructions": "Read the immutable node skill, STATE.md, and input snapshot provided by the controller. Perform only this node in the target project. You share the workspace: preserve unrelated files. Do not change graph definitions, helper code, or shared state. Write the required result JSON with the exact attempt_id, status, summary, declared patch, and real artifact paths. Store evidence in a unique project-relative evidence path per attempt; do not overwrite prior evidence. Official files must be English. Inspect the project and turn the goal into concrete, testable acceptance criteria. Do not implement. For HTTP features define endpoints, request and response schemas, status codes, data lifecycle, validation, malformed JSON, unsupported methods, unknown resources, and practical boundary cases. Match explicitly requested runtime and dependency constraints. Write requirements.md and return its criteria in requirements. Record inspection evidence.",
+      "skill": "nodes/requirements/SKILL.md"
+    },
+    {
+      "id": "implementation",
+      "name": "Implement backend",
+      "reads": [
+        "goal",
+        "requirements",
+        "implementation_round",
+        "feedback"
+      ],
+      "writes": [
+        "implementation_round",
+        "implementation_summary",
+        "tests_passed",
+        "review_passed",
+        "outcome"
+      ],
+      "max_attempts": 1,
+      "max_visits": 3,
+      "instructions": "Read the immutable node skill, STATE.md, and input snapshot provided by the controller. Perform only this node in the target project. You share the workspace: preserve unrelated files. Do not change graph definitions, helper code, or shared state. Write the required result JSON with the exact attempt_id, status, summary, declared patch, and real artifact paths. Store evidence in a unique project-relative evidence path per attempt; do not overwrite prior evidence. Official files must be English. Implement the requirements using the allowed runtime and dependencies. If feedback records a failed test or review, reproduce and fix that concrete issue while preserving intended behavior. Increment implementation_round by exactly one for this visit, including a repair visit; never exceed three. Reset tests_passed and review_passed to false and outcome to pending. For the requested Node HTTP API use only Node built-in modules, export an isolated server factory for real HTTP tests, listen on loopback for local validation, and provide a short README with actual usage. Do not claim tests or review passed without their downstream nodes. Save a change summary with actual commands and exit codes; return implementation_summary and artifact paths.",
+      "skill": "nodes/implementation/SKILL.md"
+    },
+    {
+      "id": "testing",
+      "name": "Run HTTP integration tests",
+      "reads": [
+        "goal",
+        "requirements",
+        "implementation_round",
+        "implementation_summary"
+      ],
+      "writes": [
+        "tests_passed",
+        "feedback",
+        "outcome"
+      ],
+      "max_attempts": 1,
+      "max_visits": 3,
+      "instructions": "Read the immutable node skill, STATE.md, and input snapshot provided by the controller. Perform only this node in the target project. You share the workspace: preserve unrelated files. Do not change graph definitions, helper code, or shared state. Write the required result JSON with the exact attempt_id, status, summary, declared patch, and real artifact paths. Store evidence in a unique project-relative evidence path per attempt; do not overwrite prior evidence. Official files must be English. Create or maintain meaningful automated integration tests for the acceptance criteria. Use only Node built-in test, assert, HTTP/network and process capabilities. Execute actual requests against a real loopback HTTP listener on a dynamically assigned port and close every server after testing. Cover create, list, completion update, delete, malformed JSON, invalid payload types and fields, empty title, invalid completion values, missing IDs, unknown paths, and unsupported methods as required by the contract. Assert status and response content and absence of unintended data changes. Never modify production implementation in this node. Preserve complete test output and actual command exit code in evidence. A completed failing test run is status success with tests_passed false and actionable feedback; inability to execute is status error. Set outcome to attempts_exhausted if tests fail when implementation_round is three, otherwise pending. Failing checks must remain real; never weaken or fabricate them to advance the graph.",
+      "skill": "nodes/testing/SKILL.md"
+    },
+    {
+      "id": "review",
+      "name": "Review implementation and evidence",
+      "reads": [
+        "goal",
+        "requirements",
+        "implementation_round",
+        "implementation_summary",
+        "tests_passed",
+        "feedback"
+      ],
+      "writes": [
+        "review_passed",
+        "feedback",
+        "outcome"
+      ],
+      "max_attempts": 1,
+      "max_visits": 3,
+      "instructions": "Read the immutable node skill, STATE.md, and input snapshot provided by the controller. Perform only this node in the target project. You share the workspace: preserve unrelated files. Do not change graph definitions, helper code, or shared state. Write the required result JSON with the exact attempt_id, status, summary, declared patch, and real artifact paths. Store evidence in a unique project-relative evidence path per attempt; do not overwrite prior evidence. Official files must be English. Independently inspect production code, requirements, tests, and recorded actual test evidence. Assess correctness, request validation, HTTP status and schema consistency, Node built-in-only constraint, server lifecycle, and completeness of local verification. Run focused checks if necessary, preserving actual output and exit codes. Do not change implementation or tests. Write a concrete review report citing files and observed behavior. review_passed is true only when tests_passed is true and no material issue remains. Set outcome to achieved on pass; on failure, set actionable feedback and outcome attempts_exhausted if implementation_round is three, otherwise pending. Reaching END after exhaustion must be reported as goal not achieved.",
+      "skill": "nodes/review/SKILL.md"
+    }
+  ],
+  "edges": [
+    {
+      "from": "requirements",
+      "to": "implementation"
+    },
+    {
+      "from": "implementation",
+      "to": "testing"
+    },
+    {
+      "from": "testing",
+      "to": "review",
+      "when": {
+        "field": "tests_passed",
+        "op": "eq",
+        "value": true
+      },
+      "label": "Tests pass"
+    },
+    {
+      "from": "testing",
+      "to": "implementation",
+      "when": {
+        "all": [
+          {
+            "field": "tests_passed",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "implementation_round",
+            "op": "lt",
+            "value": 3
+          }
+        ]
+      },
+      "label": "Tests fail; attempts remain"
+    },
+    {
+      "from": "testing",
+      "to": "END",
+      "when": {
+        "all": [
+          {
+            "field": "tests_passed",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "implementation_round",
+            "op": "gte",
+            "value": 3
+          }
+        ]
+      },
+      "label": "Tests fail; goal not achieved"
+    },
+    {
+      "from": "review",
+      "to": "END",
+      "when": {
+        "field": "review_passed",
+        "op": "eq",
+        "value": true
+      },
+      "label": "Review passes; goal achieved"
+    },
+    {
+      "from": "review",
+      "to": "implementation",
+      "when": {
+        "all": [
+          {
+            "field": "review_passed",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "implementation_round",
+            "op": "lt",
+            "value": 3
+          }
+        ]
+      },
+      "label": "Review fails; attempts remain"
+    },
+    {
+      "from": "review",
+      "to": "END",
+      "when": {
+        "all": [
+          {
+            "field": "review_passed",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "field": "implementation_round",
+            "op": "gte",
+            "value": 3
+          }
+        ]
+      },
+      "label": "Review fails; goal not achieved"
+    }
+  ]
+}

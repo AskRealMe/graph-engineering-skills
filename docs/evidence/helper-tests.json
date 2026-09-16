@@ -1,0 +1,9 @@
+{
+  "recorded_on": "2026-09-16",
+  "command": "python3 -m unittest discover -s tests -v",
+  "exit_code": 0,
+  "python": "3.14.7",
+  "platform": "Darwin",
+  "tests": 31,
+  "kind": "deterministic helpers; synthetic handles, not native subagent proof"
+}

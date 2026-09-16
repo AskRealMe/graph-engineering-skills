@@ -1,0 +1,40 @@
+{
+  "recorded_on": "2026-09-16",
+  "installed_revision": "f1e83bb",
+  "reference_deletion_blocked": true,
+  "original_preserved": true,
+  "records": [
+    {
+      "args": [
+        "create",
+        "--project",
+        "EVALUATION_ROOT/install-lifecycle",
+        "--spec",
+        "EVALUATION_ROOT/install-lifecycle/reference-check.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"graph\": \"EVALUATION_ROOT/install-lifecycle/.agents/skills/reference-check\",\n  \"id\": \"reference-check\",\n  \"created\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "delete",
+        "--graph",
+        "EVALUATION_ROOT/install-lifecycle/.agents/skills/preservation-check"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "{\"error\": \"Referenced by graphs: ['reference-check']\", \"type\": \"Invalid\"}\n"
+    },
+    {
+      "args": [
+        "delete",
+        "--graph",
+        "EVALUATION_ROOT/install-lifecycle/.agents/skills/reference-check"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"source\": \"EVALUATION_ROOT/install-lifecycle/.agents/skills/reference-check\",\n  \"archive\": \"EVALUATION_ROOT/install-lifecycle/.graph-engineering/archive/reference-check-20cd210c\",\n  \"history_preserved\": true,\n  \"dry_run\": false\n}\n",
+      "stderr": ""
+    }
+  ]
+}

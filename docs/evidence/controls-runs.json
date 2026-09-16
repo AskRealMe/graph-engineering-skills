@@ -1,0 +1,770 @@
+[
+  {
+    "id": "20260916T055641-61a31608",
+    "version": "1e13f68ecffe0c2a",
+    "status": "completed",
+    "current": "END",
+    "trial": true,
+    "values": {
+      "signal_path": "EVALUATION_ROOT/controls-live/resume.signal",
+      "source_text": "alpha beta gamma delta epsilon\n",
+      "word_count": 5,
+      "check_passed": false,
+      "outcome": "pending",
+      "source_path": "EVALUATION_ROOT/controls-live/revised.txt",
+      "expected_fixture": "EVALUATION_ROOT/controls-live/missing-expected.txt",
+      "goal": "Try only word counting, cancel a waiting worker, inspect its partial artifact, and safely retry"
+    },
+    "attempts": [
+      {
+        "id": "1d7b12b0a93a49cd88d32cb0754c985c",
+        "node": "count-words",
+        "step": 0,
+        "status": "interrupted",
+        "input": {
+          "signal_path": "EVALUATION_ROOT/controls-live/resume.signal",
+          "source_text": "alpha beta gamma delta epsilon\n",
+          "word_count": 0,
+          "check_passed": false,
+          "outcome": "pending",
+          "source_path": "EVALUATION_ROOT/controls-live/revised.txt",
+          "expected_fixture": "EVALUATION_ROOT/controls-live/missing-expected.txt",
+          "goal": "Try only word counting, cancel a waiting worker, inspect its partial artifact, and safely retry"
+        },
+        "created_at": "2026-09-16T05:56:41+00:00",
+        "agent_id": "/root/controls_installed/cancel_waiting_count",
+        "valid": false,
+        "summary": "After confirmed native interruption, inspected the preserved waiting marker and absence of result/signal. No count work or external effects occurred; safely retry this same count attempt."
+      },
+      {
+        "id": "d68d2a10e9a8454abe96ddaf3922f685",
+        "node": "count-words",
+        "step": 0,
+        "status": "success",
+        "input": {
+          "signal_path": "EVALUATION_ROOT/controls-live/resume.signal",
+          "source_text": "alpha beta gamma delta epsilon\n",
+          "word_count": 0,
+          "check_passed": false,
+          "outcome": "pending",
+          "source_path": "EVALUATION_ROOT/controls-live/revised.txt",
+          "expected_fixture": "EVALUATION_ROOT/controls-live/missing-expected.txt",
+          "goal": "Try only word counting, cancel a waiting worker, inspect its partial artifact, and safely retry"
+        },
+        "created_at": "2026-09-16T05:58:28+00:00",
+        "agent_id": "/root/controls_installed/recovered_count",
+        "valid": true,
+        "summary": "Confirmed the recovery signal and independently counted 5 whitespace-separated words.",
+        "result": {
+          "attempt_id": "d68d2a10e9a8454abe96ddaf3922f685",
+          "status": "success",
+          "summary": "Confirmed the recovery signal and independently counted 5 whitespace-separated words.",
+          "patch": {
+            "word_count": 5
+          },
+          "artifacts": [
+            "EVALUATION_ROOT/controls-live/.agents/skills/word-summary/runs/20260916T055641-61a31608/results/d68d2a10e9a8454abe96ddaf3922f685/waiting-marker.txt",
+            "EVALUATION_ROOT/controls-live/.agents/skills/word-summary/runs/20260916T055641-61a31608/results/d68d2a10e9a8454abe96ddaf3922f685/signal-evidence.json",
+            "EVALUATION_ROOT/controls-live/.agents/skills/word-summary/runs/20260916T055641-61a31608/results/d68d2a10e9a8454abe96ddaf3922f685/summary.json"
+          ]
+        },
+        "completed_at": "2026-09-16T05:59:55+00:00"
+      }
+    ],
+    "events": [
+      {
+        "at": "2026-09-16T05:56:41+00:00",
+        "kind": "started",
+        "trial": true,
+        "version": "1e13f68ecffe0c2a"
+      },
+      {
+        "at": "2026-09-16T05:56:41+00:00",
+        "kind": "prepared",
+        "node": "count-words",
+        "attempt_id": "1d7b12b0a93a49cd88d32cb0754c985c"
+      },
+      {
+        "at": "2026-09-16T05:57:08+00:00",
+        "kind": "bound",
+        "attempt_id": "1d7b12b0a93a49cd88d32cb0754c985c",
+        "agent_id": "/root/controls_installed/cancel_waiting_count"
+      },
+      {
+        "at": "2026-09-16T05:58:02+00:00",
+        "kind": "cancel",
+        "note": "Controlling evaluator requested cancelling the live marker-producing count worker before its external signal.",
+        "decision": null
+      },
+      {
+        "at": "2026-09-16T05:58:27+00:00",
+        "kind": "settle",
+        "note": "Native interrupt reported previous_status running; subsequent native list_agents confirmed actual handle /root/controls_installed/cancel_waiting_count interrupted. Inspected partial marker, no result JSON, no signal.",
+        "decision": null
+      },
+      {
+        "at": "2026-09-16T05:58:27+00:00",
+        "kind": "recover",
+        "note": "After confirmed native interruption, inspected the preserved waiting marker and absence of result/signal. No count work or external effects occurred; safely retry this same count attempt.",
+        "decision": "retry"
+      },
+      {
+        "at": "2026-09-16T05:58:28+00:00",
+        "kind": "prepared",
+        "node": "count-words",
+        "attempt_id": "d68d2a10e9a8454abe96ddaf3922f685"
+      },
+      {
+        "at": "2026-09-16T05:58:54+00:00",
+        "kind": "bound",
+        "attempt_id": "d68d2a10e9a8454abe96ddaf3922f685",
+        "agent_id": "/root/controls_installed/recovered_count"
+      },
+      {
+        "at": "2026-09-16T05:59:55+00:00",
+        "kind": "result",
+        "node": "count-words",
+        "attempt_id": "d68d2a10e9a8454abe96ddaf3922f685",
+        "status": "success",
+        "summary": "Confirmed the recovery signal and independently counted 5 whitespace-separated words."
+      }
+    ]
+  },
+  {
+    "id": "20260916T054212-f1afdae9",
+    "version": "1e13f68ecffe0c2a",
+    "status": "completed",
+    "current": "END",
+    "trial": false,
+    "values": {
+      "signal_path": "",
+      "source_text": "alpha beta gamma delta epsilon\n",
+      "word_count": 5,
+      "check_passed": true,
+      "outcome": "verified",
+      "source_path": "EVALUATION_ROOT/controls-live/revised.txt",
+      "expected_fixture": "EVALUATION_ROOT/controls-live/missing-expected.txt",
+      "goal": "Summarize and verify the source word count"
+    },
+    "attempts": [
+      {
+        "id": "057ecabf88ee4b66829cdca556d63952",
+        "node": "read-source",
+        "step": 0,
+        "status": "success",
+        "input": {
+          "signal_path": "",
+          "source_text": "",
+          "word_count": 0,
+          "check_passed": false,
+          "outcome": "pending",
+          "source_path": "EVALUATION_ROOT/controls-live/original.txt",
+          "expected_fixture": "EVALUATION_ROOT/controls-live/missing-expected.txt",
+          "goal": "Summarize and verify the source word count"
+        },
+        "created_at": "2026-09-16T05:42:23+00:00",
+        "agent_id": "/root/controls_installed/read_initial",
+        "valid": false,
+        "summary": "Read the UTF-8 source and saved its exact contents as evidence.",
+        "result": {
+          "attempt_id": "057ecabf88ee4b66829cdca556d63952",
+          "status": "success",
+          "summary": "Read the UTF-8 source and saved its exact contents as evidence.",
+          "patch": {
+            "source_text": "alpha beta gamma\n"
+          },
+          "artifacts": [
+            "EVALUATION_ROOT/controls-live/.agents/skills/word-summary/runs/20260916T054212-f1afdae9/results/057ecabf88ee4b66829cdca556d63952/source-evidence.txt"
+          ]
+        },
+        "completed_at": "2026-09-16T05:43:27+00:00"
+      },
+      {
+        "id": "f93b374cbced42b989a4bea74b8ad1be",
+        "node": "read-source",
+        "step": 0,
+        "status": "success",
+        "input": {
+          "signal_path": "",
+          "source_text": "",
+          "word_count": 0,
+          "check_passed": false,
+          "outcome": "pending",
+          "source_path": "EVALUATION_ROOT/controls-live/revised.txt",
+          "expected_fixture": "EVALUATION_ROOT/controls-live/missing-expected.txt",
+          "goal": "Summarize and verify the source word count"
+        },
+        "created_at": "2026-09-16T05:45:35+00:00",
+        "agent_id": "/root/controls_installed/fresh_resume/read_revised",
+        "valid": true,
+        "summary": "Read the UTF-8 source and saved its exact contents as evidence.",
+        "result": {
+          "attempt_id": "f93b374cbced42b989a4bea74b8ad1be",
+          "status": "success",
+          "summary": "Read the UTF-8 source and saved its exact contents as evidence.",
+          "patch": {
+            "source_text": "alpha beta gamma delta epsilon\n"
+          },
+          "artifacts": [
+            "EVALUATION_ROOT/controls-live/.agents/skills/word-summary/runs/20260916T054212-f1afdae9/results/f93b374cbced42b989a4bea74b8ad1be/source-evidence.txt"
+          ]
+        },
+        "completed_at": "2026-09-16T05:47:18+00:00"
+      },
+      {
+        "id": "fd9596484d274c9ea4180d24b46c8f03",
+        "node": "count-words",
+        "step": 1,
+        "status": "success",
+        "input": {
+          "signal_path": "",
+          "source_text": "alpha beta gamma delta epsilon\n",
+          "word_count": 0,
+          "check_passed": false,
+          "outcome": "pending",
+          "source_path": "EVALUATION_ROOT/controls-live/revised.txt",
+          "expected_fixture": "EVALUATION_ROOT/controls-live/missing-expected.txt",
+          "goal": "Summarize and verify the source word count"
+        },
+        "created_at": "2026-09-16T05:47:26+00:00",
+        "agent_id": "/root/controls_installed/fresh_resume/count_revised",
+        "valid": true,
+        "summary": "Counted 5 words using len(source_text.split()).",
+        "result": {
+          "attempt_id": "fd9596484d274c9ea4180d24b46c8f03",
+          "status": "success",
+          "summary": "Counted 5 words using len(source_text.split()).",
+          "patch": {
+            "word_count": 5
+          },
+          "artifacts": [
+            "EVALUATION_ROOT/controls-live/.agents/skills/word-summary/runs/20260916T054212-f1afdae9/results/fd9596484d274c9ea4180d24b46c8f03/summary.json"
+          ]
+        },
+        "completed_at": "2026-09-16T05:48:40+00:00"
+      },
+      {
+        "id": "e031028a73ab4f4d82340080434893cf",
+        "node": "verify-count",
+        "step": 2,
+        "status": "error",
+        "input": {
+          "signal_path": "",
+          "source_text": "alpha beta gamma delta epsilon\n",
+          "word_count": 5,
+          "check_passed": false,
+          "outcome": "pending",
+          "source_path": "EVALUATION_ROOT/controls-live/revised.txt",
+          "expected_fixture": "EVALUATION_ROOT/controls-live/missing-expected.txt",
+          "goal": "Summarize and verify the source word count"
+        },
+        "created_at": "2026-09-16T05:50:07+00:00",
+        "agent_id": "/root/controls_installed/verify_missing_first",
+        "valid": false,
+        "summary": "Counted 5 source words, but opening the expected fixture failed because missing-expected.txt does not exist.",
+        "result": {
+          "attempt_id": "e031028a73ab4f4d82340080434893cf",
+          "status": "error",
+          "summary": "Counted 5 source words, but opening the expected fixture failed because missing-expected.txt does not exist.",
+          "patch": {},
+          "artifacts": [
+            "EVALUATION_ROOT/controls-live/.agents/skills/word-summary/runs/20260916T054212-f1afdae9/results/e031028a73ab4f4d82340080434893cf/error.txt"
+          ]
+        },
+        "completed_at": "2026-09-16T05:51:16+00:00"
+      },
+      {
+        "id": "6d055c80f8c24a47b854206edf79feb6",
+        "node": "verify-count",
+        "step": 2,
+        "status": "error",
+        "input": {
+          "signal_path": "",
+          "source_text": "alpha beta gamma delta epsilon\n",
+          "word_count": 5,
+          "check_passed": false,
+          "outcome": "pending",
+          "source_path": "EVALUATION_ROOT/controls-live/revised.txt",
+          "expected_fixture": "EVALUATION_ROOT/controls-live/missing-expected.txt",
+          "goal": "Summarize and verify the source word count"
+        },
+        "created_at": "2026-09-16T05:51:16+00:00",
+        "agent_id": "/root/controls_installed/verify_missing_second",
+        "valid": false,
+        "summary": "Counted 5 source words, but reading the expected fixture failed with FileNotFoundError: [Errno 2] No such file or directory: 'EVALUATION_ROOT/controls-live/missing-expected.txt'",
+        "result": {
+          "attempt_id": "6d055c80f8c24a47b854206edf79feb6",
+          "status": "error",
+          "summary": "Counted 5 source words, but reading the expected fixture failed with FileNotFoundError: [Errno 2] No such file or directory: 'EVALUATION_ROOT/controls-live/missing-expected.txt'",
+          "patch": {},
+          "artifacts": [
+            "EVALUATION_ROOT/controls-live/.agents/skills/word-summary/runs/20260916T054212-f1afdae9/results/6d055c80f8c24a47b854206edf79feb6/exception.txt"
+          ]
+        },
+        "completed_at": "2026-09-16T05:52:35+00:00"
+      },
+      {
+        "id": "1c0a2cc7a69a4241b27cef43135ddd82",
+        "node": "verify-count",
+        "step": 2,
+        "status": "success",
+        "input": {
+          "signal_path": "",
+          "source_text": "alpha beta gamma delta epsilon\n",
+          "word_count": 5,
+          "check_passed": false,
+          "outcome": "pending",
+          "source_path": "EVALUATION_ROOT/controls-live/revised.txt",
+          "expected_fixture": "EVALUATION_ROOT/controls-live/missing-expected.txt",
+          "goal": "Summarize and verify the source word count"
+        },
+        "created_at": "2026-09-16T05:53:17+00:00",
+        "agent_id": "/root/controls_installed/verify_mismatch",
+        "valid": false,
+        "summary": "Independently counted 5 words; reported count is 5, fixture expects 4; comparison mismatched.",
+        "result": {
+          "attempt_id": "1c0a2cc7a69a4241b27cef43135ddd82",
+          "status": "success",
+          "summary": "Independently counted 5 words; reported count is 5, fixture expects 4; comparison mismatched.",
+          "patch": {
+            "check_passed": false,
+            "outcome": "mismatch"
+          },
+          "artifacts": [
+            "EVALUATION_ROOT/controls-live/.agents/skills/word-summary/runs/20260916T054212-f1afdae9/results/1c0a2cc7a69a4241b27cef43135ddd82/verification.json"
+          ]
+        },
+        "completed_at": "2026-09-16T05:54:52+00:00"
+      },
+      {
+        "id": "9d47f0ef5b9c400b87d6a5a8d8203ecd",
+        "node": "verify-count",
+        "step": 2,
+        "status": "success",
+        "input": {
+          "signal_path": "",
+          "source_text": "alpha beta gamma delta epsilon\n",
+          "word_count": 5,
+          "check_passed": false,
+          "outcome": "pending",
+          "source_path": "EVALUATION_ROOT/controls-live/revised.txt",
+          "expected_fixture": "EVALUATION_ROOT/controls-live/missing-expected.txt",
+          "goal": "Summarize and verify the source word count"
+        },
+        "created_at": "2026-09-16T05:55:16+00:00",
+        "agent_id": "/root/controls_installed/verify_corrected",
+        "valid": true,
+        "summary": "Independently counted 5 words; reported count is 5, fixture expects 5; comparison passed.",
+        "result": {
+          "attempt_id": "9d47f0ef5b9c400b87d6a5a8d8203ecd",
+          "status": "success",
+          "summary": "Independently counted 5 words; reported count is 5, fixture expects 5; comparison passed.",
+          "patch": {
+            "check_passed": true,
+            "outcome": "verified"
+          },
+          "artifacts": [
+            "EVALUATION_ROOT/controls-live/.agents/skills/word-summary/runs/20260916T054212-f1afdae9/results/9d47f0ef5b9c400b87d6a5a8d8203ecd/verification.json"
+          ]
+        },
+        "completed_at": "2026-09-16T05:56:41+00:00"
+      }
+    ],
+    "events": [
+      {
+        "at": "2026-09-16T05:42:12+00:00",
+        "kind": "started",
+        "trial": false,
+        "version": "1acc80d791a0e01d"
+      },
+      {
+        "at": "2026-09-16T05:42:23+00:00",
+        "kind": "prepared",
+        "node": "read-source",
+        "attempt_id": "057ecabf88ee4b66829cdca556d63952"
+      },
+      {
+        "at": "2026-09-16T05:42:40+00:00",
+        "kind": "bound",
+        "attempt_id": "057ecabf88ee4b66829cdca556d63952",
+        "agent_id": "/root/controls_installed/read_initial"
+      },
+      {
+        "at": "2026-09-16T05:42:41+00:00",
+        "kind": "pause",
+        "note": "",
+        "decision": null
+      },
+      {
+        "at": "2026-09-16T05:43:27+00:00",
+        "kind": "result",
+        "node": "read-source",
+        "attempt_id": "057ecabf88ee4b66829cdca556d63952",
+        "status": "success",
+        "summary": "Read the UTF-8 source and saved its exact contents as evidence."
+      },
+      {
+        "at": "2026-09-16T05:43:27+00:00",
+        "kind": "routed",
+        "from": "read-source",
+        "to": "count-words",
+        "selected": {
+          "from": "read-source",
+          "to": "count-words"
+        },
+        "evaluated": [
+          {
+            "edge": {
+              "from": "read-source",
+              "to": "count-words"
+            },
+            "matched": true
+          }
+        ],
+        "state": {
+          "signal_path": "",
+          "source_text": "alpha beta gamma\n",
+          "word_count": 0,
+          "check_passed": false,
+          "outcome": "pending",
+          "source_path": "EVALUATION_ROOT/controls-live/original.txt",
+          "expected_fixture": "EVALUATION_ROOT/controls-live/missing-expected.txt",
+          "goal": "Summarize and verify the source word count"
+        }
+      },
+      {
+        "at": "2026-09-16T05:43:38+00:00",
+        "kind": "migrate",
+        "note": "Controlling evaluator explicitly requested a compatible migration of the paused run to the renamed graph.",
+        "decision": null
+      },
+      {
+        "at": "2026-09-16T05:43:58+00:00",
+        "kind": "state_changed",
+        "patch": {
+          "source_path": "EVALUATION_ROOT/controls-live/revised.txt"
+        },
+        "affected": [
+          "read-source"
+        ],
+        "note": "Use the revised source text and update affected results before resuming."
+      },
+      {
+        "at": "2026-09-16T05:43:58+00:00",
+        "kind": "set-state",
+        "note": "Use the revised source text and update affected results before resuming.",
+        "decision": null
+      },
+      {
+        "at": "2026-09-16T05:43:59+00:00",
+        "kind": "rerun",
+        "note": "Rerun the earliest impacted stage because the source input changed.",
+        "decision": null
+      },
+      {
+        "at": "2026-09-16T05:45:26+00:00",
+        "kind": "resume",
+        "note": "",
+        "decision": null
+      },
+      {
+        "at": "2026-09-16T05:45:35+00:00",
+        "kind": "prepared",
+        "node": "read-source",
+        "attempt_id": "f93b374cbced42b989a4bea74b8ad1be"
+      },
+      {
+        "at": "2026-09-16T05:46:13+00:00",
+        "kind": "bound",
+        "attempt_id": "f93b374cbced42b989a4bea74b8ad1be",
+        "agent_id": "/root/controls_installed/fresh_resume/read_revised"
+      },
+      {
+        "at": "2026-09-16T05:47:18+00:00",
+        "kind": "result",
+        "node": "read-source",
+        "attempt_id": "f93b374cbced42b989a4bea74b8ad1be",
+        "status": "success",
+        "summary": "Read the UTF-8 source and saved its exact contents as evidence."
+      },
+      {
+        "at": "2026-09-16T05:47:18+00:00",
+        "kind": "routed",
+        "from": "read-source",
+        "to": "count-words",
+        "selected": {
+          "from": "read-source",
+          "to": "count-words"
+        },
+        "evaluated": [
+          {
+            "edge": {
+              "from": "read-source",
+              "to": "count-words"
+            },
+            "matched": true
+          }
+        ],
+        "state": {
+          "signal_path": "",
+          "source_text": "alpha beta gamma delta epsilon\n",
+          "word_count": 0,
+          "check_passed": false,
+          "outcome": "pending",
+          "source_path": "EVALUATION_ROOT/controls-live/revised.txt",
+          "expected_fixture": "EVALUATION_ROOT/controls-live/missing-expected.txt",
+          "goal": "Summarize and verify the source word count"
+        }
+      },
+      {
+        "at": "2026-09-16T05:47:26+00:00",
+        "kind": "prepared",
+        "node": "count-words",
+        "attempt_id": "fd9596484d274c9ea4180d24b46c8f03"
+      },
+      {
+        "at": "2026-09-16T05:47:57+00:00",
+        "kind": "bound",
+        "attempt_id": "fd9596484d274c9ea4180d24b46c8f03",
+        "agent_id": "/root/controls_installed/fresh_resume/count_revised"
+      },
+      {
+        "at": "2026-09-16T05:48:40+00:00",
+        "kind": "result",
+        "node": "count-words",
+        "attempt_id": "fd9596484d274c9ea4180d24b46c8f03",
+        "status": "success",
+        "summary": "Counted 5 words using len(source_text.split())."
+      },
+      {
+        "at": "2026-09-16T05:48:40+00:00",
+        "kind": "routed",
+        "from": "count-words",
+        "to": "verify-count",
+        "selected": {
+          "from": "count-words",
+          "to": "verify-count"
+        },
+        "evaluated": [
+          {
+            "edge": {
+              "from": "count-words",
+              "to": "verify-count"
+            },
+            "matched": true
+          }
+        ],
+        "state": {
+          "signal_path": "",
+          "source_text": "alpha beta gamma delta epsilon\n",
+          "word_count": 5,
+          "check_passed": false,
+          "outcome": "pending",
+          "source_path": "EVALUATION_ROOT/controls-live/revised.txt",
+          "expected_fixture": "EVALUATION_ROOT/controls-live/missing-expected.txt",
+          "goal": "Summarize and verify the source word count"
+        }
+      },
+      {
+        "at": "2026-09-16T05:48:46+00:00",
+        "kind": "approval_requested",
+        "node": "verify-count",
+        "question": "May I independently verify this word summary using the expected-count fixture?"
+      },
+      {
+        "at": "2026-09-16T05:50:07+00:00",
+        "kind": "respond",
+        "note": "Controlling evaluator reply: Approve. Please independently verify this word summary against the expected-count fixture. I explicitly authorize this local test-stage execution, including the two bounded attempts if the fixture is absent.",
+        "decision": "approve"
+      },
+      {
+        "at": "2026-09-16T05:50:07+00:00",
+        "kind": "prepared",
+        "node": "verify-count",
+        "attempt_id": "e031028a73ab4f4d82340080434893cf"
+      },
+      {
+        "at": "2026-09-16T05:50:26+00:00",
+        "kind": "bound",
+        "attempt_id": "e031028a73ab4f4d82340080434893cf",
+        "agent_id": "/root/controls_installed/verify_missing_first"
+      },
+      {
+        "at": "2026-09-16T05:51:16+00:00",
+        "kind": "result",
+        "node": "verify-count",
+        "attempt_id": "e031028a73ab4f4d82340080434893cf",
+        "status": "error",
+        "summary": "Counted 5 source words, but opening the expected fixture failed because missing-expected.txt does not exist."
+      },
+      {
+        "at": "2026-09-16T05:51:16+00:00",
+        "kind": "prepared",
+        "node": "verify-count",
+        "attempt_id": "6d055c80f8c24a47b854206edf79feb6"
+      },
+      {
+        "at": "2026-09-16T05:51:34+00:00",
+        "kind": "bound",
+        "attempt_id": "6d055c80f8c24a47b854206edf79feb6",
+        "agent_id": "/root/controls_installed/verify_missing_second"
+      },
+      {
+        "at": "2026-09-16T05:52:35+00:00",
+        "kind": "result",
+        "node": "verify-count",
+        "attempt_id": "6d055c80f8c24a47b854206edf79feb6",
+        "status": "error",
+        "summary": "Counted 5 source words, but reading the expected fixture failed with FileNotFoundError: [Errno 2] No such file or directory: 'EVALUATION_ROOT/controls-live/missing-expected.txt'"
+      },
+      {
+        "at": "2026-09-16T05:53:16+00:00",
+        "kind": "retry",
+        "note": "Controlling evaluator explicitly requested creating fixture value 4 and manually retrying the failed verification stage.",
+        "decision": null
+      },
+      {
+        "at": "2026-09-16T05:53:17+00:00",
+        "kind": "prepared",
+        "node": "verify-count",
+        "attempt_id": "1c0a2cc7a69a4241b27cef43135ddd82"
+      },
+      {
+        "at": "2026-09-16T05:53:40+00:00",
+        "kind": "bound",
+        "attempt_id": "1c0a2cc7a69a4241b27cef43135ddd82",
+        "agent_id": "/root/controls_installed/verify_mismatch"
+      },
+      {
+        "at": "2026-09-16T05:54:52+00:00",
+        "kind": "result",
+        "node": "verify-count",
+        "attempt_id": "1c0a2cc7a69a4241b27cef43135ddd82",
+        "status": "success",
+        "summary": "Independently counted 5 words; reported count is 5, fixture expects 4; comparison mismatched."
+      },
+      {
+        "at": "2026-09-16T05:54:52+00:00",
+        "kind": "routed",
+        "from": "verify-count",
+        "to": "END",
+        "selected": {
+          "from": "verify-count",
+          "to": "END",
+          "otherwise": true,
+          "label": "Count mismatch"
+        },
+        "evaluated": [
+          {
+            "edge": {
+              "from": "verify-count",
+              "to": "END",
+              "when": {
+                "field": "check_passed",
+                "op": "eq",
+                "value": true
+              },
+              "label": "Count verified"
+            },
+            "matched": false
+          }
+        ],
+        "state": {
+          "signal_path": "",
+          "source_text": "alpha beta gamma delta epsilon\n",
+          "word_count": 5,
+          "check_passed": false,
+          "outcome": "mismatch",
+          "source_path": "EVALUATION_ROOT/controls-live/revised.txt",
+          "expected_fixture": "EVALUATION_ROOT/controls-live/missing-expected.txt",
+          "goal": "Summarize and verify the source word count"
+        }
+      },
+      {
+        "at": "2026-09-16T05:54:57+00:00",
+        "kind": "rerun",
+        "note": "Controlling evaluator corrected expected fixture from 4 to 5 and explicitly requested rerunning the chosen verification node while retaining history.",
+        "decision": null
+      },
+      {
+        "at": "2026-09-16T05:54:58+00:00",
+        "kind": "resume",
+        "note": "",
+        "decision": null
+      },
+      {
+        "at": "2026-09-16T05:54:59+00:00",
+        "kind": "approval_requested",
+        "node": "verify-count",
+        "question": "May I independently verify this word summary using the expected-count fixture?"
+      },
+      {
+        "at": "2026-09-16T05:55:15+00:00",
+        "kind": "respond",
+        "note": "Actual controlling evaluator request: Afterward explicitly set expected count to 5 as a new test-user correction and run the requested chosen-node rerun (retaining history) to verify success. This message authorizes both sequential local evaluator actions.",
+        "decision": "approve"
+      },
+      {
+        "at": "2026-09-16T05:55:16+00:00",
+        "kind": "prepared",
+        "node": "verify-count",
+        "attempt_id": "9d47f0ef5b9c400b87d6a5a8d8203ecd"
+      },
+      {
+        "at": "2026-09-16T05:55:41+00:00",
+        "kind": "bound",
+        "attempt_id": "9d47f0ef5b9c400b87d6a5a8d8203ecd",
+        "agent_id": "/root/controls_installed/verify_corrected"
+      },
+      {
+        "at": "2026-09-16T05:56:41+00:00",
+        "kind": "result",
+        "node": "verify-count",
+        "attempt_id": "9d47f0ef5b9c400b87d6a5a8d8203ecd",
+        "status": "success",
+        "summary": "Independently counted 5 words; reported count is 5, fixture expects 5; comparison passed."
+      },
+      {
+        "at": "2026-09-16T05:56:41+00:00",
+        "kind": "routed",
+        "from": "verify-count",
+        "to": "END",
+        "selected": {
+          "from": "verify-count",
+          "to": "END",
+          "when": {
+            "field": "check_passed",
+            "op": "eq",
+            "value": true
+          },
+          "label": "Count verified"
+        },
+        "evaluated": [
+          {
+            "edge": {
+              "from": "verify-count",
+              "to": "END",
+              "when": {
+                "field": "check_passed",
+                "op": "eq",
+                "value": true
+              },
+              "label": "Count verified"
+            },
+            "matched": true
+          }
+        ],
+        "state": {
+          "signal_path": "",
+          "source_text": "alpha beta gamma delta epsilon\n",
+          "word_count": 5,
+          "check_passed": true,
+          "outcome": "verified",
+          "source_path": "EVALUATION_ROOT/controls-live/revised.txt",
+          "expected_fixture": "EVALUATION_ROOT/controls-live/missing-expected.txt",
+          "goal": "Summarize and verify the source word count"
+        }
+      }
+    ]
+  }
+]

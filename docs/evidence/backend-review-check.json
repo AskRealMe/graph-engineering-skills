@@ -1,0 +1,14 @@
+{
+  "command": "node evidence/review-2cb0dbfa56ce49de9bcd9874d0d68796/interrupted-patch-check.cjs",
+  "executable": "USER_HOME/.hermes/node/bin/node",
+  "args": [
+    "evidence/review-2cb0dbfa56ce49de9bcd9874d0d68796/interrupted-patch-check.cjs"
+  ],
+  "cwd": "EVALUATION_ROOT/backend-live",
+  "runtime": "v22.23.1",
+  "startedAt": "2026-09-16T06:22:43.296Z",
+  "endedAt": "2026-09-16T06:22:43.345Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null
+}

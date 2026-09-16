@@ -1,0 +1,15 @@
+{
+  "revision": "f1e83bb",
+  "shared_state_section": true,
+  "language_default_and_choices_visible": true,
+  "language_not_listed_as_required_input": true,
+  "new_node_archived": "EVALUATION_ROOT/management-live/.agents/skills/research-workflow/.authoring-history/0675942e1ee142db954a5746b9361078/retest-note",
+  "archived_node_hashes_match": true,
+  "live_node_removed": true,
+  "diagram_updated": true,
+  "final_node_count": 5,
+  "old_notes_orphan_remains": true,
+  "installed_helper_sha256": "36306827c3b32d8d3c153ab9dc7b3b831f319841e7bb96faed8a5360025329a7",
+  "generated_helper_sha256": "36306827c3b32d8d3c153ab9dc7b3b831f319841e7bb96faed8a5360025329a7",
+  "node_attempts_executed": 0
+}

@@ -1,0 +1,1274 @@
+[
+  {
+    "phase": "initial",
+    "operation": "connect",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "connect",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "doctor",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "doctor",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/01-proposal-unsaved.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "create",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "create",
+      "--project",
+      "EVALUATION_ROOT/management-live",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/02-save-approved-workflow.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "list",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "list",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "list",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "list",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "diff",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "diff",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/03-rename-default-agents.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/03-rename-default-agents.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "apply",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "apply",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/03-rename-default-agents.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "diff",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "diff",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/04a-shared-fact-check.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/04a-shared-fact-check.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "apply",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "apply",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/04a-shared-fact-check.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "diff",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "diff",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/04b-copy-fact-check.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/04b-copy-fact-check.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "apply",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "apply",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/04b-copy-fact-check.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "diff",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "diff",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/04c-adapt-local-fact-check.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/04c-adapt-local-fact-check.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "apply",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "apply",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/04c-adapt-local-fact-check.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "diff",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "diff",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/05a-add-notes.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/05a-add-notes.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "apply",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "apply",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/05a-add-notes.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "diff",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "diff",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/05b-reorder-notes-entry.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/05b-reorder-notes-entry.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "apply",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "apply",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/05b-reorder-notes-entry.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "diff",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "diff",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/05c-remove-notes-language-completion.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/05c-remove-notes-language-completion.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "apply",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "apply",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/05c-remove-notes-language-completion.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "clone",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "clone",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--project",
+      "EVALUATION_ROOT/management-live",
+      "--id",
+      "research-draft",
+      "--name",
+      "Research publishing independent draft"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "list",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "list",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "diff",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "diff",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-draft",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/06-clone-independent-edit.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/06-clone-independent-edit.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "apply",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "apply",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-draft",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/06-clone-independent-edit.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "start",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "start",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-draft",
+      "--project",
+      "EVALUATION_ROOT/management-live",
+      "--goal",
+      "History-preservation fixture; do not execute any work nodes.",
+      "--input",
+      "EVALUATION_ROOT/management-live/drafts/06-history-input.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "cancel",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "cancel",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-draft",
+      "--run",
+      "20260916T054452-2d54836e"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "status",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "status",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-draft",
+      "--run",
+      "20260916T054452-2d54836e"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "history",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "history",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-draft"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "delete",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "delete",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-draft",
+      "--dry-run"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "delete",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "delete",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-draft"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "disconnect",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "disconnect",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "connect",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "connect",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "doctor",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "doctor",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "history",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "history",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.graph-engineering/archive/research-draft-a77edc18"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "route",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "route",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--node",
+      "fact-check",
+      "--input",
+      "EVALUATION_ROOT/management-live/drafts/07-route-normal.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "route",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "route",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--node",
+      "fact-check",
+      "--input",
+      "EVALUATION_ROOT/management-live/drafts/07-route-failed.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "route",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "route",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--node",
+      "fact-check",
+      "--input",
+      "EVALUATION_ROOT/management-live/drafts/07-route-exhausted.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "route",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "route",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--node",
+      "fact-check",
+      "--input",
+      "EVALUATION_ROOT/management-live/drafts/07-route-missing-route.json"
+    ],
+    "exit_code": 2,
+    "error": "{\"error\": \"No route matched from fact-check; ask for clarification\", \"type\": \"Invalid\"}\n"
+  },
+  {
+    "phase": "initial",
+    "operation": "route",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "route",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--node",
+      "save-result",
+      "--input",
+      "EVALUATION_ROOT/management-live/drafts/07-route-save-success.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "route",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "route",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--node",
+      "save-result",
+      "--input",
+      "EVALUATION_ROOT/management-live/drafts/07-route-save-incomplete.json"
+    ],
+    "exit_code": 2,
+    "error": "{\"error\": \"No route matched from save-result; ask for clarification\", \"type\": \"Invalid\"}\n"
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/07-invalid-wrong-language-type.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 2,
+    "error": "{\"error\": \"Invalid default: language\", \"type\": \"Invalid\"}\n"
+  },
+  {
+    "phase": "initial",
+    "operation": "apply",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "apply",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/07-invalid-wrong-language-type.json"
+    ],
+    "exit_code": 2,
+    "error": "{\"error\": \"Invalid default: language\", \"type\": \"Invalid\"}\n"
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/07-repaired-wrong-language-type.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/07-invalid-unknown-read.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 2,
+    "error": "{\"error\": \"research: invalid reads\", \"type\": \"Invalid\"}\n"
+  },
+  {
+    "phase": "initial",
+    "operation": "apply",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "apply",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/07-invalid-unknown-read.json"
+    ],
+    "exit_code": 2,
+    "error": "{\"error\": \"research: invalid reads\", \"type\": \"Invalid\"}\n"
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/07-repaired-unknown-read.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/07-invalid-dangling-edge.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 2,
+    "error": "{\"error\": \"Dangling edge: {'from': 'research', 'to': 'removed-notes'}\", \"type\": \"Invalid\"}\n"
+  },
+  {
+    "phase": "initial",
+    "operation": "apply",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "apply",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/07-invalid-dangling-edge.json"
+    ],
+    "exit_code": 2,
+    "error": "{\"error\": \"Dangling edge: {'from': 'research', 'to': 'removed-notes'}\", \"type\": \"Invalid\"}\n"
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/07-repaired-dangling-edge.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "clone",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "clone",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--project",
+      "EVALUATION_ROOT/management-live",
+      "--id",
+      "routing-probe",
+      "--name",
+      "Routing probe fixture"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/07-ambiguous-routes.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "apply",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "apply",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/routing-probe",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/07-ambiguous-routes.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "route",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "route",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/routing-probe",
+      "--node",
+      "fact-check",
+      "--input",
+      "EVALUATION_ROOT/management-live/drafts/07-route-normal.json"
+    ],
+    "exit_code": 2,
+    "error": "{\"error\": \"Multiple routes matched from fact-check; ask for clarification\", \"type\": \"Invalid\"}\n"
+  },
+  {
+    "phase": "initial",
+    "operation": "diff",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "diff",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/routing-probe",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/07-repaired-ambiguous-routes.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/07-repaired-ambiguous-routes.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "apply",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "apply",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/routing-probe",
+      "--spec",
+      "EVALUATION_ROOT/management-live/drafts/07-repaired-ambiguous-routes.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "route",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "route",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/routing-probe",
+      "--node",
+      "fact-check",
+      "--input",
+      "EVALUATION_ROOT/management-live/drafts/07-route-normal.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "delete",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "delete",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/routing-probe",
+      "--dry-run"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "delete",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "delete",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/routing-probe"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "doctor",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "doctor",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "initial",
+    "operation": "list",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "list",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "retest",
+    "operation": "diff",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/install-lifecycle/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "diff",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/retest-drafts/01-refresh.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "retest",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/install-lifecycle/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/retest-drafts/01-refresh.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "retest",
+    "operation": "apply",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/install-lifecycle/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "apply",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/retest-drafts/01-refresh.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "retest",
+    "operation": "diff",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/install-lifecycle/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "diff",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/retest-drafts/02-add-retest-note.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "retest",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/install-lifecycle/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/retest-drafts/02-add-retest-note.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "retest",
+    "operation": "apply",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/install-lifecycle/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "apply",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/retest-drafts/02-add-retest-note.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "retest",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/install-lifecycle/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "retest",
+    "operation": "diff",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/install-lifecycle/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "diff",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/retest-drafts/03-remove-retest-note.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "retest",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/install-lifecycle/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--spec",
+      "EVALUATION_ROOT/management-live/retest-drafts/03-remove-retest-note.json",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "retest",
+    "operation": "apply",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/install-lifecycle/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "apply",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow",
+      "--spec",
+      "EVALUATION_ROOT/management-live/retest-drafts/03-remove-retest-note.json"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "retest",
+    "operation": "validate",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/install-lifecycle/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "validate",
+      "--graph",
+      "EVALUATION_ROOT/management-live/.agents/skills/research-workflow"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "retest",
+    "operation": "doctor",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/install-lifecycle/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "doctor",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  },
+  {
+    "phase": "retest",
+    "operation": "list",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "EVALUATION_ROOT/install-lifecycle/.agents/skills/graph-engineering/scripts/graph_ops.py",
+      "list",
+      "--project",
+      "EVALUATION_ROOT/management-live"
+    ],
+    "exit_code": 0,
+    "error": ""
+  }
+]

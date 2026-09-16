@@ -1,0 +1,25 @@
+{
+  "command": "node --test --test-reporter=tap todo.integration.test.cjs",
+  "executable": "node",
+  "args": [
+    "--test",
+    "--test-reporter=tap",
+    "todo.integration.test.cjs"
+  ],
+  "cwd": "EVALUATION_ROOT/backend-live",
+  "runtime": "v22.23.1",
+  "startedAt": "2026-09-16T06:18:11.757Z",
+  "endedAt": "2026-09-16T06:18:17.076Z",
+  "pid": 9504,
+  "exitCode": 0,
+  "signal": null,
+  "counts": {
+    "tests": 99,
+    "suites": 0,
+    "pass": 99,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  }
+}

@@ -1,8 +1,10 @@
 # Graph Engineering
 
-A meta skill that teaches Codex to create and edit graph workflow skills from natural-language requests.
+A meta skill for creating and editing graph workflow skills from natural-language requests. Its first supported host is Codex.
 
 Ask for a workflow. Codex writes a new skill containing node skills, transitions, state, and a Mermaid diagram. Invoke that generated skill later with a real task; Codex delegates each work node to a subagent and carries results between nodes.
+
+The reusable product is the skill itself: instructions an AI agent reads and follows, with supporting references, templates, and file helpers. `graph-engineering` teaches authoring; a generated graph skill teaches execution; each node skill teaches one stage of work. The user describes all of these operations in natural language.
 
 ## Install
 
@@ -49,4 +51,3 @@ python3 -m unittest discover -s tests -v
 ```
 
 See [requirements](docs/requirements.md) and [verification evidence](docs/verification.md). Natural-language behavioral evaluation is separate from helper tests.
-

@@ -1,0 +1,295 @@
+{
+  "id": "20260916T060457-7402ef9a",
+  "version": "1e13f68ecffe0c2a",
+  "status": "completed",
+  "current": "END",
+  "trial": false,
+  "values": {
+    "signal_path": "",
+    "source_text": "alpha beta gamma\n",
+    "word_count": 3,
+    "check_passed": true,
+    "outcome": "verified",
+    "source_path": "EVALUATION_ROOT/controls-live/original.txt",
+    "expected_fixture": "EVALUATION_ROOT/controls-live/expected-three.txt",
+    "goal": "Verify the three words in original.txt as a new independent normal task"
+  },
+  "attempts": [
+    {
+      "id": "65287c554ae24a8e9a56aaf337555fff",
+      "node": "read-source",
+      "step": 0,
+      "status": "success",
+      "input": {
+        "signal_path": "",
+        "source_text": "",
+        "word_count": 0,
+        "check_passed": false,
+        "outcome": "pending",
+        "source_path": "EVALUATION_ROOT/controls-live/original.txt",
+        "expected_fixture": "EVALUATION_ROOT/controls-live/expected-three.txt",
+        "goal": "Verify the three words in original.txt as a new independent normal task"
+      },
+      "created_at": "2026-09-16T06:04:57.480107+00:00",
+      "agent_id": "/root/controls_installed/reuse_read",
+      "valid": true,
+      "summary": "Read original.txt as UTF-8 and preserved its exact contents in source-evidence.txt.",
+      "result": {
+        "attempt_id": "65287c554ae24a8e9a56aaf337555fff",
+        "status": "success",
+        "summary": "Read original.txt as UTF-8 and preserved its exact contents in source-evidence.txt.",
+        "patch": {
+          "source_text": "alpha beta gamma\n"
+        },
+        "artifacts": [
+          "EVALUATION_ROOT/controls-live/.agents/skills/word-summary/runs/20260916T060457-7402ef9a/results/65287c554ae24a8e9a56aaf337555fff/source-evidence.txt"
+        ]
+      },
+      "completed_at": "2026-09-16T06:06:04.289655+00:00"
+    },
+    {
+      "id": "b01bebf6c0d44daeb5b196ae60c2bb7d",
+      "node": "count-words",
+      "step": 1,
+      "status": "success",
+      "input": {
+        "signal_path": "",
+        "source_text": "alpha beta gamma\n",
+        "word_count": 0,
+        "check_passed": false,
+        "outcome": "pending",
+        "source_path": "EVALUATION_ROOT/controls-live/original.txt",
+        "expected_fixture": "EVALUATION_ROOT/controls-live/expected-three.txt",
+        "goal": "Verify the three words in original.txt as a new independent normal task"
+      },
+      "created_at": "2026-09-16T06:06:04.429094+00:00",
+      "agent_id": "/root/controls_installed/reuse_count",
+      "valid": true,
+      "summary": "Counted 3 words in the exact source text using len(source_text.split()).",
+      "result": {
+        "attempt_id": "b01bebf6c0d44daeb5b196ae60c2bb7d",
+        "status": "success",
+        "summary": "Counted 3 words in the exact source text using len(source_text.split()).",
+        "patch": {
+          "word_count": 3
+        },
+        "artifacts": [
+          "EVALUATION_ROOT/controls-live/.agents/skills/word-summary/runs/20260916T060457-7402ef9a/results/b01bebf6c0d44daeb5b196ae60c2bb7d/summary.json"
+        ]
+      },
+      "completed_at": "2026-09-16T06:07:00.809249+00:00"
+    },
+    {
+      "id": "c8416dc983a549fab5f0b915721cf59a",
+      "node": "verify-count",
+      "step": 2,
+      "status": "success",
+      "input": {
+        "signal_path": "",
+        "source_text": "alpha beta gamma\n",
+        "word_count": 3,
+        "check_passed": false,
+        "outcome": "pending",
+        "source_path": "EVALUATION_ROOT/controls-live/original.txt",
+        "expected_fixture": "EVALUATION_ROOT/controls-live/expected-three.txt",
+        "goal": "Verify the three words in original.txt as a new independent normal task"
+      },
+      "created_at": "2026-09-16T06:07:48.041262+00:00",
+      "agent_id": "/root/controls_installed/reuse_verify",
+      "valid": true,
+      "summary": "Independently calculated 3 words; the reported count and expected fixture both equal 3.",
+      "result": {
+        "attempt_id": "c8416dc983a549fab5f0b915721cf59a",
+        "status": "success",
+        "summary": "Independently calculated 3 words; the reported count and expected fixture both equal 3.",
+        "patch": {
+          "check_passed": true,
+          "outcome": "verified"
+        },
+        "artifacts": [
+          "EVALUATION_ROOT/controls-live/.agents/skills/word-summary/runs/20260916T060457-7402ef9a/results/c8416dc983a549fab5f0b915721cf59a/verification.json"
+        ]
+      },
+      "completed_at": "2026-09-16T06:09:08.661596+00:00"
+    }
+  ],
+  "events": [
+    {
+      "at": "2026-09-16T06:04:57.175602+00:00",
+      "kind": "started",
+      "trial": false,
+      "version": "1e13f68ecffe0c2a"
+    },
+    {
+      "at": "2026-09-16T06:04:57.480390+00:00",
+      "kind": "prepared",
+      "node": "read-source",
+      "attempt_id": "65287c554ae24a8e9a56aaf337555fff"
+    },
+    {
+      "at": "2026-09-16T06:05:26.855304+00:00",
+      "kind": "bound",
+      "attempt_id": "65287c554ae24a8e9a56aaf337555fff",
+      "agent_id": "/root/controls_installed/reuse_read"
+    },
+    {
+      "at": "2026-09-16T06:06:04.289827+00:00",
+      "kind": "result",
+      "node": "read-source",
+      "attempt_id": "65287c554ae24a8e9a56aaf337555fff",
+      "status": "success",
+      "summary": "Read original.txt as UTF-8 and preserved its exact contents in source-evidence.txt."
+    },
+    {
+      "at": "2026-09-16T06:06:04.289851+00:00",
+      "kind": "routed",
+      "from": "read-source",
+      "to": "count-words",
+      "selected": {
+        "from": "read-source",
+        "to": "count-words"
+      },
+      "evaluated": [
+        {
+          "edge": {
+            "from": "read-source",
+            "to": "count-words"
+          },
+          "matched": true
+        }
+      ],
+      "state": {
+        "signal_path": "",
+        "source_text": "alpha beta gamma\n",
+        "word_count": 0,
+        "check_passed": false,
+        "outcome": "pending",
+        "source_path": "EVALUATION_ROOT/controls-live/original.txt",
+        "expected_fixture": "EVALUATION_ROOT/controls-live/expected-three.txt",
+        "goal": "Verify the three words in original.txt as a new independent normal task"
+      }
+    },
+    {
+      "at": "2026-09-16T06:06:04.429313+00:00",
+      "kind": "prepared",
+      "node": "count-words",
+      "attempt_id": "b01bebf6c0d44daeb5b196ae60c2bb7d"
+    },
+    {
+      "at": "2026-09-16T06:06:24.140476+00:00",
+      "kind": "bound",
+      "attempt_id": "b01bebf6c0d44daeb5b196ae60c2bb7d",
+      "agent_id": "/root/controls_installed/reuse_count"
+    },
+    {
+      "at": "2026-09-16T06:07:00.809587+00:00",
+      "kind": "result",
+      "node": "count-words",
+      "attempt_id": "b01bebf6c0d44daeb5b196ae60c2bb7d",
+      "status": "success",
+      "summary": "Counted 3 words in the exact source text using len(source_text.split())."
+    },
+    {
+      "at": "2026-09-16T06:07:00.809612+00:00",
+      "kind": "routed",
+      "from": "count-words",
+      "to": "verify-count",
+      "selected": {
+        "from": "count-words",
+        "to": "verify-count"
+      },
+      "evaluated": [
+        {
+          "edge": {
+            "from": "count-words",
+            "to": "verify-count"
+          },
+          "matched": true
+        }
+      ],
+      "state": {
+        "signal_path": "",
+        "source_text": "alpha beta gamma\n",
+        "word_count": 3,
+        "check_passed": false,
+        "outcome": "pending",
+        "source_path": "EVALUATION_ROOT/controls-live/original.txt",
+        "expected_fixture": "EVALUATION_ROOT/controls-live/expected-three.txt",
+        "goal": "Verify the three words in original.txt as a new independent normal task"
+      }
+    },
+    {
+      "at": "2026-09-16T06:07:01.007045+00:00",
+      "kind": "approval_requested",
+      "node": "verify-count",
+      "question": "May I independently verify this word summary using the expected-count fixture?"
+    },
+    {
+      "at": "2026-09-16T06:07:47.877750+00:00",
+      "kind": "respond",
+      "note": "Controlling evaluator reply: Approve the independent verification of this new normal run against expected-three.txt. Confirm the new result is 3 and prior completed main/trial run files remain unchanged, then finish the separate final-revision reuse report. This is approval for this local test gate only.",
+      "decision": "approve"
+    },
+    {
+      "at": "2026-09-16T06:07:48.041461+00:00",
+      "kind": "prepared",
+      "node": "verify-count",
+      "attempt_id": "c8416dc983a549fab5f0b915721cf59a"
+    },
+    {
+      "at": "2026-09-16T06:08:11.165950+00:00",
+      "kind": "bound",
+      "attempt_id": "c8416dc983a549fab5f0b915721cf59a",
+      "agent_id": "/root/controls_installed/reuse_verify"
+    },
+    {
+      "at": "2026-09-16T06:09:08.661847+00:00",
+      "kind": "result",
+      "node": "verify-count",
+      "attempt_id": "c8416dc983a549fab5f0b915721cf59a",
+      "status": "success",
+      "summary": "Independently calculated 3 words; the reported count and expected fixture both equal 3."
+    },
+    {
+      "at": "2026-09-16T06:09:08.661872+00:00",
+      "kind": "routed",
+      "from": "verify-count",
+      "to": "END",
+      "selected": {
+        "from": "verify-count",
+        "to": "END",
+        "when": {
+          "field": "check_passed",
+          "op": "eq",
+          "value": true
+        },
+        "label": "Count verified"
+      },
+      "evaluated": [
+        {
+          "edge": {
+            "from": "verify-count",
+            "to": "END",
+            "when": {
+              "field": "check_passed",
+              "op": "eq",
+              "value": true
+            },
+            "label": "Count verified"
+          },
+          "matched": true
+        }
+      ],
+      "state": {
+        "signal_path": "",
+        "source_text": "alpha beta gamma\n",
+        "word_count": 3,
+        "check_passed": true,
+        "outcome": "verified",
+        "source_path": "EVALUATION_ROOT/controls-live/original.txt",
+        "expected_fixture": "EVALUATION_ROOT/controls-live/expected-three.txt",
+        "goal": "Verify the three words in original.txt as a new independent normal task"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "recorded_on": "2026-09-16",
+  "command": "node --test --test-reporter=tap todo.integration.test.cjs",
+  "exit_code": 0,
+  "counts": {
+    "tests": 99,
+    "pass": 99,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "purpose": "Independent parent verification after graph completion"
+}

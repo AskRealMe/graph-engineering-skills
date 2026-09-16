@@ -1,0 +1,41 @@
+{
+  "recorded_at": "2026-09-16T06:00:16.340Z",
+  "started_at": "2026-09-16T06:00:10.926Z",
+  "cwd": "EVALUATION_ROOT/backend-live",
+  "command": "node --test --test-reporter=tap todo.integration.test.cjs",
+  "executable": "USER_HOME/.hermes/node/bin/node",
+  "arguments": [
+    "--test",
+    "--test-reporter=tap",
+    "todo.integration.test.cjs"
+  ],
+  "node_version": "v22.23.1",
+  "exit_code": 1,
+  "signal": null,
+  "execution_error": null,
+  "snapshots": {
+    "todo.integration.test.cjs": {
+      "sha256": "e8de50833a3fc4713289ac985cda4b967bc0e2cf333b23152f01b0f7bae89303",
+      "snapshot": "evidence/testing-f7c609ae24f049ba98c89217b54ce462/integration-source.snapshot.txt"
+    },
+    "server.cjs": {
+      "sha256": "dd4208d000a79c5c94d802aeaf8526fa8ff606be3fb743d5868d5c2ce5699709",
+      "snapshot": "evidence/testing-f7c609ae24f049ba98c89217b54ce462/server-source.snapshot.txt"
+    },
+    "requirements.md": {
+      "sha256": "8b3f83f7f621243084814e87afeedafa28707041e686a8e7dd718cf4d9eccaee",
+      "snapshot": "evidence/testing-f7c609ae24f049ba98c89217b54ce462/requirements.snapshot.md"
+    },
+    "evidence/deliberate-regression/record.json": {
+      "sha256": "4f3b2b09280cb5f9826b51f6d862682bd4acaf5093106e377734277f771b6296",
+      "snapshot": "evidence/testing-f7c609ae24f049ba98c89217b54ce462/regression-record.snapshot.json"
+    }
+  },
+  "counts": {
+    "tests": 99,
+    "pass": 98,
+    "fail": 1,
+    "cancelled": 0,
+    "skipped": 0
+  }
+}
