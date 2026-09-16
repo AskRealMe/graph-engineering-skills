@@ -23,6 +23,8 @@ apply --graph ABS --spec DRAFT
 
 For removal, repair affected edges and state dependencies; ask if the replacement path is ambiguous. Semantic conditions need typed node outputs such as `review_passed` plus judgment instructions. Route using that output. Use a node's `approval` for a user gate. Discover available Codex roles/models before setting `agent`; never invent an unavailable role.
 
+Define business success separately from reaching `END`. If an exhaustion branch ends the workflow, preserve an explicit outcome such as `attempts_exhausted` and explain that the goal was not achieved. Alternatively, let the visit limit block the run for user input. Never label failed checks as a successful deliverable just because execution ended.
+
 Use an absolute `skill` path with `skill_mode: shared` to reuse an existing skill. Use `skill_mode: copy` for graph-local adaptation; its resources are copied. Own-node text goes in `instructions`. Shared edits require checking other references and explicit scope; a graph-local edit should use a copy.
 
 - Copy: `clone --graph ABS --project TARGET --id NEW --name DISPLAY`. Identity and state are independent; no history is copied.

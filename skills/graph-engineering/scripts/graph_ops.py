@@ -9,6 +9,7 @@ import difflib
 import fcntl
 import hashlib
 import json
+import math
 import os
 from pathlib import Path
 import re
@@ -87,6 +88,8 @@ def typed(value, rule):
     kind = rule["type"]
     if kind in {"integer", "number"} and isinstance(value, bool):
         return False
+    if kind == "number" and isinstance(value, (int, float)) and not math.isfinite(value):
+        return False
     return isinstance(value, TYPES[kind]) and ("enum" not in rule or value in rule["enum"])
 
 
@@ -139,8 +142,8 @@ def matches(expr, values):
     require(key in values, f"Routing needs state field: {key}")
     a, b = values[key], expr["value"]
     try:
-        if op == "eq": return type(a) == type(b) and a == b
-        if op == "ne": return not (type(a) == type(b) and a == b)
+        if op == "eq": return a == b and isinstance(a, bool) == isinstance(b, bool)
+        if op == "ne": return not (a == b and isinstance(a, bool) == isinstance(b, bool))
         if op == "gt": return a > b
         if op == "gte": return a >= b
         if op == "lt": return a < b
@@ -154,7 +157,7 @@ def matches(expr, values):
 
 def resolve_skill(root, node):
     path = Path(node.get("skill", f"nodes/{node['id']}/SKILL.md"))
-    return path if path.is_absolute() else root / path
+    return (path if path.is_absolute() else root / path).resolve()
 
 
 def validate(spec, root):
@@ -323,7 +326,7 @@ def materialize(root, spec):
             node["skill"] = str((dest / "SKILL.md").relative_to(root))
     validate(spec, root)
     template = (BUNDLE / "assets" / "graph-skill.md").read_text()
-    substitutions = {"id": spec["id"], "name": spec["name"], "description": spec["description"], "description_json": json.dumps(spec["description"], ensure_ascii=False), "entry": spec["entry"], "nodes": "\n".join(f"- `{n['id']}`: {n.get('name', n['id'])}; skill: `{n['skill']}`" for n in spec["nodes"]), "inputs": "\n".join(f"- `{k}` ({v['type']}): {'required' if v.get('required') else 'optional'}" for k, v in spec["state"].items())}
+    substitutions = {"id": spec["id"], "name": spec["name"], "description": spec["description"], "description_json": json.dumps(spec["description"], ensure_ascii=False), "entry": spec["entry"], "nodes": "\n".join(f"- `{n['id']}`: {n.get('name', n['id'])}; skill: `{n['skill']}`" for n in spec["nodes"]), "inputs": "\n".join(f"- `{k}` ({v['type']}): {'required' if v.get('required') and 'default' not in v else 'optional; default supplied'}" for k, v in spec["state"].items() if v.get('required')) or "No additional required inputs."}
     for key, val in substitutions.items():
         template = template.replace("{{" + key + "}}", val)
     for folder in ("references", "assets", "scripts"):

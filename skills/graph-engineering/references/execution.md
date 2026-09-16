@@ -28,5 +28,4 @@ Resolve helper and graph paths from the generated skill. Use Python, absolute pa
 
 `trial --node ID --input FILE --goal TEXT` creates a separate node-only run. Dispatch an actual subagent using the same procedure. Do not run it concurrently with a graph editing the same application. A trial never advances the normal graph.
 
-On completion report actual status, outputs, evidence, and unresolved issues. Users can ask for another run without supplying any file syntax.
-
+On completion report actual status, domain outcome, outputs, evidence, and unresolved issues. `completed` means execution reached `END`; it does not prove the user's goal succeeded. Inspect domain flags and any exhaustion outcome before reporting success. Users can ask for another run without supplying any file syntax.
