@@ -230,6 +230,30 @@ class GraphTests(unittest.TestCase):
         self.call("retry", note="User requests one new retry budget")
         self.assertEqual(self.finish({"implemented": True})["current"], "test")
 
+    def test_recovery_cannot_replay_a_committed_attempt(self):
+        self.start()
+        finished = self.finish({"requirements": "Already applied"})
+        result = finished["attempts"][-1]["result"]
+        with self.assertRaisesRegex(ops.Invalid, "already committed"):
+            self.call("recover", decision="accept", note="Inspected result", result=self.jsonfile(result))
+        self.call("cancel")
+        with self.assertRaisesRegex(ops.Invalid, "already committed"):
+            self.call("recover", decision="retry", note="Inspected result")
+        self.assertEqual(self.call("status")["values"]["requirements"], "Already applied")
+
+    def test_recovery_can_accept_a_result_retained_during_stop(self):
+        self.start()
+        handoff = self.call("prepare")
+        self.call("bind", agent_id="unit-test-handle")
+        self.call("cancel")
+        result = {"attempt_id": handoff["attempt_id"], "status": "success", "summary": "Synthetic retained result", "patch": {"requirements": "Checked output"}, "artifacts": []}
+        file = self.jsonfile(result)
+        stopped = self.call("finish", result=file)
+        self.assertEqual(stopped["values"]["requirements"], "")
+        accepted = self.call("recover", decision="accept", note="Terminal handle and output inspected", result=file)
+        self.assertEqual(accepted["values"]["requirements"], "Checked output")
+        self.assertEqual(accepted["current"], "implement")
+
     def test_loop_limit_is_not_an_implicit_success(self):
         self.reach_test()
         self.finish({"tests_passed": False})

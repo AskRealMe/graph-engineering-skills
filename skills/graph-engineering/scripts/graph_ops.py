@@ -540,6 +540,7 @@ def control(graph, run, args):
         # The parent must verify termination; this helper cannot query Codex handles.
         attempt = inflight(run) or (run["attempts"][-1] if run["attempts"] else None)
         require(attempt is not None and attempt["status"] in {"prepared", "running", "interrupted", "success", "error"}, "No attempt to recover")
+        require(attempt["node"] == run["current"] and attempt["step"] == run["step"], "Attempt was already committed; use an explicit rerun instead of recovery")
         if args.decision == "accept":
             require(args.result, "Accept requires the original worker result")
             run.update(status="running", inflight=attempt["id"])
