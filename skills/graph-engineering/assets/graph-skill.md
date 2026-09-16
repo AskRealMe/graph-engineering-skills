@@ -25,4 +25,12 @@ The user supplies the goal and inputs naturally. Ask only for missing consequent
 
 ## Inputs
 
+Gather required values without a default from the user's request or project context.
+
 {{inputs}}
+
+## Shared state
+
+These fields carry intermediate results and defaults. A user can request suitable starting overrides in natural language; do not ask them to supply intermediate results that the nodes produce.
+
+{{state}}

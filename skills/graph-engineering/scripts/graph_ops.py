@@ -326,7 +326,17 @@ def materialize(root, spec):
             node["skill"] = str((dest / "SKILL.md").relative_to(root))
     validate(spec, root)
     template = (BUNDLE / "assets" / "graph-skill.md").read_text()
-    substitutions = {"id": spec["id"], "name": spec["name"], "description": spec["description"], "description_json": json.dumps(spec["description"], ensure_ascii=False), "entry": spec["entry"], "nodes": "\n".join(f"- `{n['id']}`: {n.get('name', n['id'])}; skill: `{n['skill']}`" for n in spec["nodes"]), "inputs": "\n".join(f"- `{k}` ({v['type']}): {'required' if v.get('required') and 'default' not in v else 'optional; default supplied'}" for k, v in spec["state"].items() if v.get('required')) or "No additional required inputs."}
+    def describe_field(key, rule):
+        default = f"; default: `{json.dumps(rule['default'], ensure_ascii=False)}`" if "default" in rule else ""
+        choices = f"; choices: `{json.dumps(rule['enum'], ensure_ascii=False)}`" if "enum" in rule else ""
+        return f"- `{key}` ({rule['type']}){default}{choices}"
+    substitutions = {
+        "id": spec["id"], "name": spec["name"], "description": spec["description"],
+        "description_json": json.dumps(spec["description"], ensure_ascii=False), "entry": spec["entry"],
+        "nodes": "\n".join(f"- `{n['id']}`: {n.get('name', n['id'])}; skill: `{n['skill']}`" for n in spec["nodes"]),
+        "inputs": "\n".join(describe_field(k, v) for k, v in spec["state"].items() if v.get('required')) or "No additional required inputs.",
+        "state": "\n".join(describe_field(k, v) for k, v in spec["state"].items() if not v.get('required')) or "No additional shared state.",
+    }
     for key, val in substitutions.items():
         template = template.replace("{{" + key + "}}", val)
     for folder in ("references", "assets", "scripts"):
@@ -675,6 +685,14 @@ def main(argv=None):
             changes = "".join(difflib.unified_diff(json.dumps(spec, indent=2).splitlines(True), json.dumps(draft, indent=2).splitlines(True), fromfile="saved", tofile="proposed"))
             if cmd == "diff": return {"diff": changes}
             changed = materialize(graph, draft)
+            removed = {n["id"] for n in spec["nodes"]} - {n["id"] for n in changed["nodes"]}
+            referenced = [resolve_skill(graph, n) for n in changed["nodes"]]
+            for node_id in removed:
+                directory = graph / "nodes" / node_id
+                if directory.exists() and not any(p.is_relative_to(directory.resolve()) for p in referenced):
+                    archive = graph / ".authoring-history" / uuid.uuid4().hex / node_id
+                    archive.parent.mkdir(parents=True)
+                    directory.rename(archive)
             return {"version": digest(changed), "diff": changes, "existing_runs_preserved": True}
         if cmd == "render":
             validate(spec, graph)

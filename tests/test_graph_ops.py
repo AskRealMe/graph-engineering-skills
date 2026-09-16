@@ -137,6 +137,32 @@ class GraphTests(unittest.TestCase):
         self.assertEqual(second["values"]["requirements"], "")
         self.assertEqual(len(self.call("history")), 2)
 
+    def test_removing_node_archives_owned_skill_and_keeps_run_snapshot(self):
+        run = self.start()
+        self.call("pause")
+        old = (self.graph / "nodes/review/SKILL.md").read_text()
+        self.spec["nodes"] = [n for n in self.spec["nodes"] if n["id"] != "review"]
+        self.spec["edges"] = [e for e in self.spec["edges"] if e["from"] != "review"]
+        for edge in self.spec["edges"]:
+            if edge["to"] == "review": edge["to"] = "END"
+        self.write_spec()
+        self.call("apply", spec=str(self.specfile))
+        self.assertFalse((self.graph / "nodes/review").exists())
+        archived = list((self.graph / ".authoring-history").glob("*/review/SKILL.md"))
+        self.assertEqual(archived[0].read_text(), old)
+        self.assertEqual((self.graph / "runs" / run["id"] / "skills/review/SKILL.md").read_text(), old)
+
+    def test_optional_defaults_are_visible_separately_from_required_inputs(self):
+        self.spec["state"]["language"] = {"type": "string", "default": "English", "enum": ["English", "Korean"]}
+        self.write_spec()
+        self.call("apply", spec=str(self.specfile))
+        text = (self.graph / "SKILL.md").read_text()
+        inputs, state = text.split("## Inputs", 1)[1].split("## Shared state", 1)
+        self.assertIn("`goal`", inputs)
+        self.assertNotIn("tests_passed", inputs)
+        self.assertIn('`language` (string); default: `"English"`', state)
+        self.assertIn("Korean", state)
+
     def test_latest_run_uses_creation_time_not_random_identifier(self):
         first = self.start()
         self.call("cancel")
