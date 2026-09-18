@@ -17,13 +17,13 @@ Add `--global` for a personal installation. Installation uses the open `skills` 
 ## Use natural language
 
 ```text
-Use $graph-engineering to create a backend development graph: analyze the
+Use /graph-engineering to create a backend development graph: analyze the
 requirements, implement, test, and review. Failed tests or reviews return to
 implementation. Stop after three implementation passes.
 ```
 
 ```text
-Use $graph-engineering to create a graph that checks competitors for new
+Use /graph-engineering to create a graph that checks competitors for new
 features, selects the ones worth adding to our product, opens GitHub
 issues, and implements them as pull requests. Name it
 daily-competitor-feature.
@@ -35,7 +35,7 @@ Show me the updated graph and explain what changed.
 ```
 
 ```text
-Use $backend-development-graph to implement a small HTTP task API.
+Use /backend-development-graph to implement a small HTTP task API.
 Pause after the next node, then continue from another Codex task.
 ```
 
