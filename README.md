@@ -9,7 +9,7 @@ The reusable product is the skill itself: instructions an AI agent reads and fol
 ## Install
 
 ```sh
-npx skills add AskRealMe/graph-engineering-skills --skill graph-engineering --agent codex
+npx skills add AskRealMe/graph-engineering-skills
 ```
 
 Add `--global` for a personal installation. Installation uses the open `skills` CLI and this GitHub repository; no separate server or npm package from this repository is required.
