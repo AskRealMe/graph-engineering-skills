@@ -23,6 +23,13 @@ implementation. Stop after three implementation passes.
 ```
 
 ```text
+Use $graph-engineering to create a graph that checks competitors for new
+features, selects the ones worth adding to our product, opens GitHub
+issues, and implements them as pull requests. Name it
+daily-competitor-feature.
+```
+
+```text
 Add a security review after tests. Use my existing security-review skill.
 Show me the updated graph and explain what changed.
 ```
